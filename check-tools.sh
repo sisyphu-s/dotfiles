@@ -57,3 +57,5 @@ for i in "${init[@]}"; do
 		cp -r "$i" $HOME &>/dev/null
 	fi
 done
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custome/plugins/zsh-autosuggestions
