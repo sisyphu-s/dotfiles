@@ -54,6 +54,6 @@ mapfile -t init < <(find $path_init -mindepth 1 -maxdepth 1)
 
 for i in "${init[@]}"; do
 	if [[ ! -n "$(echo "$i" | grep -Po "^.+/check-tools.sh")" ]]; then
-		mv "$i" $HOME
+		cp -r "$i" $HOME &>/dev/null
 	fi
 done
