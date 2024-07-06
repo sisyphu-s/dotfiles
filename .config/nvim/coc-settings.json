@@ -1,0 +1,22 @@
+{
+  "colors.enable": true,
+  "highlight.colorNames.enable": false,
+  "highlight.disableLanguages": [
+    "php",
+    "cpp",
+    "c",
+    "javascript",
+    "json",
+    "bash",
+    "md"
+  ],
+  "diagnostic.errorSign": "\u2716",
+  "diagnostic.warningSign": "\ue654",
+  "diagnostic.infoSign": "\uf129",
+  "diagnostic.hintSign": "\uf7d6",
+  "diagnostic.enableHighlightLineNumber": true,
+  "diagnostic.showUnused": true,
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  }
+}

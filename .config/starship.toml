@@ -1,0 +1,36 @@
+format = """$battery $all """
+add_newline=false
+command_timeout = 10000
+#[username]
+#style_user = "#4ADBF4 bold"
+#style_root = "red bold"
+#format = "[$user]($style) "
+#disabled = false
+#show_always = true
+
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+truncation_length = 5
+style = "#4ADBF4 bold"
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
