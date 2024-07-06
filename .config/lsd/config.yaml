@@ -1,0 +1,10 @@
+icons:
+  when: auto
+  theme: fancy
+  separator: "  "
+  size: small
+
+
+total-size: true
+
+header: false
