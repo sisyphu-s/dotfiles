@@ -50,12 +50,10 @@ done
 npm_tools
 cargo_tool
 
-mapfile -t init < <(find $path_init -mindepth 1 -maxdepth 1)
-
+mapfile -t init < <(find $path_init -mindepth 1 -maxdepth 1 | sed -E '/(^.*\.git$|^.*check-tools\.sh$)/Id')
 for i in "${init[@]}"; do
-	if [[ ! -n "$(echo "$i" | grep -Po "^.+/check-tools.sh")" ]]; then
-		cp -r "$i" $HOME &>/dev/null
-	fi
+	cp -r "$i" $HOME &>/dev/null
 done
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
