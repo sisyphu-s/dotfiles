@@ -14,7 +14,10 @@ return {
 
 		telescope.setup({
 			defaults = {
-				path_display = { "smart" },
+				path_display = {
+					"absolute", -- Menampilkan path absolut dari root directory
+					"truncate", -- Memotong path jika terlalu panjang
+				},
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
