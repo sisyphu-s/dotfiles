@@ -27,6 +27,7 @@ return {
 				"vim",
 				"c",
 				"php",
+				"graphql",
 			},
 
 			incremental_selection = {
