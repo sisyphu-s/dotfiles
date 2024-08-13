@@ -27,17 +27,26 @@ local insert_ctrl_map = function(command, exec)
 	insert_map("<C-" .. command .. ">", exec)
 end
 
+-- Normal mode mappings
 normal_map("H", "<<")
 normal_map("L", ">>")
 normal_map("zz", "/clean-search-qwerty")
---fungsi untuk membuka Telescope
 normal_map("tt", "Telescope") --plugin
 normal_map("nt", "Telescope notify") --plugin
---save dan keluar satu tab
 normal_map("qq", "w! | bd") --plugin
---save dan keluar samua tab
 normal_map("Q", "wq!")
 normal_map("ff", "w!") --plugin
+
+normal_ctrl_map("h", "wincmd h") -- Move to the left split ketika window editor di split.
+normal_ctrl_map("j", "wincmd j") -- Move to the below split
+normal_ctrl_map("k", "wincmd k") -- Move to the above split
+normal_ctrl_map("l", "wincmd l") -- Move to the right split
+
+normal_ctrl_map("Up", "resize +2")
+normal_ctrl_map("Down", "resize -2")
+normal_ctrl_map("Left", "vertical resize -2")
+normal_ctrl_map("Right", "vertical resize +2")
+
 -- command untuk menselect semua nama yang sama dan merubahnya:
 -- :% s/words/newwords
 -- fungsi untuk membuka dan menutup tree pada mode normal dan insert
