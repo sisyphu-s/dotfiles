@@ -29,6 +29,7 @@ end
 
 -- Normal mode mappings
 normal_map("H", "<<")
+normal_map("zm", "BufferLinePick")
 normal_map("L", ">>")
 normal_map("zz", "/clean-search-qwerty")
 normal_map("tt", "Telescope") --plugin
