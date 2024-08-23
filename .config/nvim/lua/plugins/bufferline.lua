@@ -1,8 +1,8 @@
 return {
 	"akinsho/bufferline.nvim",
 	priority = 1000,
+	version = "v4.*",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	version = "v3.*",
 	opts = {
 		options = {
 			mode = "tabs",
