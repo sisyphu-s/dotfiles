@@ -2,7 +2,6 @@ return {
 	"kyazdani42/nvim-tree.lua",
 	priority = 1000,
 	config = function()
-		-- disable netrw at the very start of your init.lua (strongly advised)
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 
@@ -10,8 +9,8 @@ return {
 		if not status_safe then
 			return
 		end
-		-- empty setup using defaults
-		nvim_tree.setup({ -- BEGIN_DEFAULT_OPTS
+
+		nvim_tree.setup({
 			auto_reload_on_write = true,
 			create_in_closed_folder = false,
 			disable_netrw = false,
@@ -27,9 +26,9 @@ return {
 			on_attach = "disable",
 			select_prompts = false,
 			view = {
-				adaptive_size = false,
+				adaptive_size = true, -- Enable adaptive size
 				centralize_selection = false,
-				width = 30,
+				width = 30, -- Initial width, will adjust based on content
 				side = "left",
 				preserve_window_proportions = false,
 				number = true,
