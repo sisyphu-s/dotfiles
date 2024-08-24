@@ -28,7 +28,7 @@ return {
 			view = {
 				adaptive_size = true, -- Enable adaptive size
 				centralize_selection = false,
-				width = 30, -- Initial width, will adjust based on content
+				width = 25, -- Initial width, will adjust based on content
 				side = "left",
 				preserve_window_proportions = false,
 				number = true,
